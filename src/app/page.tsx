@@ -1,9 +1,11 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/portfolio/Navbar";
+import Hero from "@/components/portfolio/Hero";
+import About from "@/components/portfolio/About";
+import Projects from "@/components/portfolio/Projects";
+import Contact from "@/components/portfolio/Contact";
+import Footer from "@/components/portfolio/Footer";
+import ScrollProgress from "@/components/portfolio/ScrollProgress";
+import CursorGlow from "@/components/portfolio/CursorGlow";
 
 export const metadata = {
   title: "Saul.dev | Portfolio Frontend",
@@ -12,7 +14,9 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="bg-zinc-950 text-zinc-50 min-h-screen font-sans selection:bg-blue-500/30 relative">
+    <main className="dark:bg-zinc-950 bg-zinc-50 dark:text-zinc-50 text-zinc-900 min-h-screen font-sans relative transition-colors duration-300">
+      <ScrollProgress />
+      <CursorGlow />
       <Navbar />
       <Hero />
       <About />

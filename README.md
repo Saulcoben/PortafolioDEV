@@ -14,13 +14,6 @@ Me enfoco en construir soluciones que mejoren la eficiencia operativa real del n
 
 💼 Experiencia Profesional
 
-🏢 Líder de Sistemas / Desarrollo — Sinergia SAS
-Desarrollo de aplicaciones internas.
-Automatización de flujos de trabajo.
-Optimización de bases de datos.
-Mejora de seguridad y protección de datos.
-Soporte TI proactivo y resolución de incidencias.
-
 🏢 Desarrollador Web — Hyundai Electronics
 Implementación e integración de plataformas web.
 Optimización de rendimiento.

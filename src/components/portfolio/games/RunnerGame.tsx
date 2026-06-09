@@ -29,6 +29,7 @@ export default function RunnerGame() {
     let gameSpeed = 6;
     let frameCount = 0;
     let actualScore = 0;
+    let lastEmittedScore = 0;
 
     const groundY = canvas.height - 40;
     
@@ -47,6 +48,7 @@ export default function RunnerGame() {
       gameSpeed = 6;
       frameCount = 0;
       actualScore = 0;
+      lastEmittedScore = 0;
       setScore(0);
     };
 
@@ -122,8 +124,10 @@ export default function RunnerGame() {
 
       frameCount++;
       actualScore += 0.1;
-      if (Math.floor(actualScore) > score) {
-        setScore(Math.floor(actualScore));
+      const flooredScore = Math.floor(actualScore);
+      if (flooredScore > lastEmittedScore) {
+        lastEmittedScore = flooredScore;
+        setScore(flooredScore);
       }
       
       if (frameCount % 500 === 0) {
@@ -193,7 +197,7 @@ export default function RunnerGame() {
       canvas!.removeEventListener("mousedown", mouseDownHandler);
       canvas!.removeEventListener("touchstart", mouseDownHandler);
     };
-  }, [isPlaying, gameOver, score]);
+  }, [isPlaying, gameOver]);
 
   return (
     <div className="relative group bg-[#09090b] rounded-3xl overflow-hidden border border-zinc-800/80 shadow-2xl flex flex-col items-center p-6 lg:p-8">

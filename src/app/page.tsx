@@ -2,6 +2,7 @@ import Navbar from "@/components/portfolio/Navbar";
 import Hero from "@/components/portfolio/Hero";
 import About from "@/components/portfolio/About";
 import Projects from "@/components/portfolio/Projects";
+import InteractiveProjects from "@/components/portfolio/InteractiveProjects";
 import Contact from "@/components/portfolio/Contact";
 import Footer from "@/components/portfolio/Footer";
 import ScrollProgress from "@/components/portfolio/ScrollProgress";
@@ -21,6 +22,7 @@ export default function Home() {
       <Hero />
       <About />
       <Projects />
+      <InteractiveProjects />
       <Contact />
       <Footer />
     </main>

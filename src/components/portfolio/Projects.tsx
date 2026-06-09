@@ -10,7 +10,7 @@ const projects = [
     description:
       "Tienda online de alto rendimiento con WooCommerce, optimizada para SEO técnico y Core Web Vitals (PageSpeed 99/100).",
     tags: ["WordPress", "WooCommerce", "SEO", "PHP"],
-    demo: "#",
+    demo: "/demo-ecommerce",
     color: "emerald",
     icon: <ShoppingCart className="w-16 h-16 text-emerald-400" />,
     gradient: "dark:from-emerald-500/20 from-emerald-500/10 dark:via-emerald-600/5 via-emerald-400/5 to-transparent",
@@ -41,7 +41,7 @@ const projects = [
     description:
       "Aplicación full-stack escalable, desplegada mediante pipelines automatizados de DevOps para cero tiempo de inactividad.",
     tags: ["Next.js", "Docker", "DevOps", "Node.js"],
-    demo: "#",
+    demo: "/demo-devops",
     color: "blue",
     icon: <Server className="w-16 h-16 text-blue-400" />,
     gradient: "dark:from-blue-500/20 from-blue-500/10 dark:via-blue-600/5 via-blue-400/5 to-transparent",
@@ -72,7 +72,7 @@ const projects = [
     description:
       "Transformación completa de una plataforma corporativa aplicando investigación UX, aumentando la retención en un 40%.",
     tags: ["Figma", "UI/UX", "React", "Tailwind"],
-    demo: "#",
+    demo: "/demo-uxui",
     color: "purple",
     icon: <Palette className="w-16 h-16 text-purple-400" />,
     gradient: "dark:from-purple-500/20 from-purple-500/10 dark:via-purple-600/5 via-purple-400/5 to-transparent",

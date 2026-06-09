@@ -263,7 +263,7 @@ function HeroContent() {
             >
               {mounted && (
                 <TypewriterText
-                  text="Desarrollador Frontend apasionado por React, Next.js y Tailwind CSS. Transformo ideas en interfaces elegantes y de alto rendimiento."
+                  text="Desarrollador Web Full Stack, Experto en SEO, WordPress y DevOps. Diseño y construyo plataformas digitales rentables, escalables y con un UX/UI excepcional."
                   delay={500}
                 />
               )}

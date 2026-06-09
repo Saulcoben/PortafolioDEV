@@ -8,8 +8,8 @@ import ScrollProgress from "@/components/portfolio/ScrollProgress";
 import CursorGlow from "@/components/portfolio/CursorGlow";
 
 export const metadata = {
-  title: "Saul.dev | Portfolio Frontend",
-  description: "Portfolio personal de un Desarrollador Frontend con experiencia en React, Next.js y Tailwind CSS.",
+  title: "Saul.dev | Web Developer, SEO & WordPress Expert",
+  description: "Portfolio personal de un Desarrollador Web Full Stack, Especialista en SEO, Experto en WordPress, DevOps y Diseño UX/UI.",
 };
 
 export default function Home() {

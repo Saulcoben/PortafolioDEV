@@ -2,44 +2,44 @@
 
 import { useRef, useState, useCallback, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
-import { Code2, MonitorSmartphone, Zap, Layout } from "lucide-react";
+import { Code2, Settings, Search, Layout } from "lucide-react";
 
 const skills = [
   {
     icon: <Code2 className="w-6 h-6 text-blue-400" />,
-    title: "Desarrollo Limpio",
+    title: "Desarrollo & DevOps",
     description:
-      "Escribo código escalable, mantenible y siguiendo los mejores estándares y patrones de diseño.",
+      "Código escalable, CI/CD y despliegues eficientes con las últimas tecnologías web.",
     gradient: "dark:from-blue-500/20 from-blue-500/10 dark:to-blue-600/5 to-blue-600/5",
     borderColor: "hover:border-blue-500/50",
     glowColor: "group-hover:shadow-blue-500/20",
   },
   {
-    icon: <Layout className="w-6 h-6 text-cyan-400" />,
-    title: "Diseño UI/UX",
+    icon: <Settings className="w-6 h-6 text-emerald-400" />,
+    title: "Experto WordPress",
     description:
-      "Creación de interfaces modernas, atractivas e intuitivas centradas en el usuario.",
-    gradient: "dark:from-cyan-500/20 from-cyan-500/10 dark:to-cyan-600/5 to-cyan-600/5",
-    borderColor: "hover:border-cyan-500/50",
-    glowColor: "group-hover:shadow-cyan-500/20",
+      "Desarrollo a medida, WooCommerce, Divi (Elegant Themes) y optimización avanzada.",
+    gradient: "dark:from-emerald-500/20 from-emerald-500/10 dark:to-emerald-600/5 to-emerald-600/5",
+    borderColor: "hover:border-emerald-500/50",
+    glowColor: "group-hover:shadow-emerald-500/20",
   },
   {
-    icon: <MonitorSmartphone className="w-6 h-6 text-purple-400" />,
-    title: "Diseño Adaptable",
+    icon: <Search className="w-6 h-6 text-purple-400" />,
+    title: "Estrategia SEO",
     description:
-      "Experiencias perfectas en móviles, tablets y escritorio con enfoque Mobile-First.",
+      "Optimización técnica y de contenido para dominar los Core Web Vitals y el posicionamiento.",
     gradient: "dark:from-purple-500/20 from-purple-500/10 dark:to-purple-600/5 to-purple-600/5",
     borderColor: "hover:border-purple-500/50",
     glowColor: "group-hover:shadow-purple-500/20",
   },
   {
-    icon: <Zap className="w-6 h-6 text-yellow-400" />,
-    title: "Alto Rendimiento",
+    icon: <Layout className="w-6 h-6 text-cyan-400" />,
+    title: "Diseño UI/UX",
     description:
-      "Optimización extrema de Core Web Vitals para una carga y navegación instantáneas.",
-    gradient: "dark:from-yellow-500/20 from-yellow-500/10 dark:to-yellow-600/5 to-yellow-600/5",
-    borderColor: "hover:border-yellow-500/50",
-    glowColor: "group-hover:shadow-yellow-500/20",
+      "Creación de interfaces modernas, altamente conversoras y centradas en el usuario.",
+    gradient: "dark:from-cyan-500/20 from-cyan-500/10 dark:to-cyan-600/5 to-cyan-600/5",
+    borderColor: "hover:border-cyan-500/50",
+    glowColor: "group-hover:shadow-cyan-500/20",
   },
 ];
 
@@ -173,16 +173,10 @@ export default function About() {
             <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-8" />
 
             <p className="dark:text-zinc-400 text-zinc-600 text-lg leading-relaxed mb-6">
-              Soy un desarrollador apasionado por la intersección entre el
-              diseño visual y la ingeniería de software. Me especializo en crear
-              aplicaciones web modernas utilizando el ecosistema de{" "}
-              <strong className="dark:text-zinc-200 text-zinc-800">React</strong> y{" "}
-              <strong className="dark:text-zinc-200 text-zinc-800">Next.js</strong>.
+              Soy un profesional versátil que combina el poder del <strong className="dark:text-zinc-200 text-zinc-800">Desarrollo Web Full Stack</strong>, <strong className="dark:text-zinc-200 text-zinc-800">DevOps</strong>, y la optimización <strong className="dark:text-zinc-200 text-zinc-800">SEO</strong>. Domino ecosistemas modernos como React y Next.js, así como plataformas maduras como <strong className="dark:text-zinc-200 text-zinc-800">WordPress</strong>.
             </p>
             <p className="dark:text-zinc-400 text-zinc-600 text-lg leading-relaxed">
-              Mi enfoque siempre es la calidad: código limpio, accesibilidad, y
-              un rendimiento inigualable. Disfruto resolviendo problemas
-              complejos y transformándolos en soluciones simples y elegantes.
+              Mi enfoque es integral: desde un <strong className="dark:text-zinc-200 text-zinc-800">UX/UI</strong> atractivo que convierte usuarios, hasta arquitecturas backend escalables e integraciones continuas, garantizando siempre el máximo rendimiento y posicionamiento.
             </p>
           </motion.div>
 
@@ -194,7 +188,7 @@ export default function About() {
           >
             <TiltCard className="dark:bg-gradient-to-br bg-gradient-to-br dark:from-zinc-800/60 from-white dark:to-zinc-900/60 to-zinc-50 rounded-2xl p-8 border dark:border-zinc-800/60 border-zinc-200/60 flex flex-col items-center justify-center text-center aspect-square hover:border-blue-500/30 transition-colors duration-300 dark:shadow-xl shadow-xl shadow-black/20 shadow-black/5">
               <span className="text-5xl font-bold dark:text-white text-zinc-900 mb-3">
-                <AnimatedCounter target={3} suffix="+" />
+                <AnimatedCounter target={6} suffix="+" />
               </span>
               <span className="dark:text-zinc-400 text-zinc-500 text-sm font-medium">
                 Años Experiencia
@@ -203,7 +197,7 @@ export default function About() {
 
             <TiltCard className="dark:bg-gradient-to-br bg-gradient-to-br dark:from-blue-600/10 from-blue-500/5 dark:to-blue-900/10 to-blue-100/50 rounded-2xl p-8 border dark:border-blue-500/20 border-blue-200/40 flex flex-col items-center justify-center text-center aspect-square hover:border-blue-400/40 transition-colors duration-300 shadow-xl dark:shadow-blue-950/20 shadow-blue-100/30">
               <span className="text-5xl font-bold text-blue-400 mb-3">
-                <AnimatedCounter target={20} suffix="+" />
+                <AnimatedCounter target={50} suffix="+" />
               </span>
               <span className="dark:text-zinc-400 text-zinc-500 text-sm font-medium">
                 Proyectos
@@ -240,6 +234,32 @@ export default function About() {
               </TiltCard>
             </motion.div>
           ))}
+        </div>
+
+        {/* Tech Stack */}
+        <div className="mt-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+            className="text-center mb-10"
+          >
+            <h3 className="text-2xl font-bold dark:text-white text-zinc-900 mb-2">Stack Tecnológico</h3>
+            <p className="dark:text-zinc-400 text-zinc-500 text-sm">Herramientas y tecnologías con las que trabajo diariamente</p>
+          </motion.div>
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+            className="flex flex-wrap justify-center gap-3"
+          >
+            {["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "Docker", "WordPress", "WooCommerce", "Divi (Elegant Themes)", "Figma", "SEO Técnico", "Google Analytics", "GitHub Actions", "AWS"].map((tech) => (
+              <span key={tech} className="px-4 py-2 rounded-full border dark:border-zinc-800/60 border-zinc-200/60 dark:bg-zinc-900/50 bg-white/50 dark:text-zinc-300 text-zinc-700 text-sm font-medium hover:dark:border-blue-500/50 hover:border-blue-500/50 transition-colors">
+                {tech}
+              </span>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>

@@ -2,41 +2,99 @@
 
 import { useRef, useState, useCallback, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
-import { ExternalLink, Workflow, Store, BarChart3, ArrowRight } from "lucide-react";
+import { ExternalLink, ShoppingCart, Server, Palette, ArrowRight, Store, Workflow, BarChart3 } from "lucide-react";
 
 const projects = [
   {
-    title: "Automatización Inteligente de Leads",
+    title: "E-commerce WordPress & SEO",
     description:
-      "Prototipo funcional de automatización comercial que prioriza clientes potenciales mediante reglas de negocio, simulando flujo de integración con CRM.",
-    tags: ["Next.js", "API Routes", "Tailwind CSS", "React State"],
-    demo: "/demo-leads",
+      "Tienda online de alto rendimiento con WooCommerce, optimizada para SEO técnico y Core Web Vitals (PageSpeed 99/100).",
+    tags: ["WordPress", "WooCommerce", "SEO", "PHP"],
+    demo: "#",
+    color: "emerald",
+    icon: <ShoppingCart className="w-16 h-16 text-emerald-400" />,
+    gradient: "dark:from-emerald-500/20 from-emerald-500/10 dark:via-emerald-600/5 via-emerald-400/5 to-transparent",
+    glowColor: "rgba(52, 211, 153, 0.15)",
+    tagBg: "dark:bg-emerald-500/10 bg-emerald-500/5 dark:text-emerald-300 text-emerald-600 dark:border-emerald-500/20 border-emerald-300/20",
+    btnBg: "from-emerald-500/20 to-emerald-400/20 hover:from-emerald-500/30 hover:to-teal-500/30 border-emerald-500/20 hover:border-emerald-400/30",
+    workflow: [
+      {
+        step: "1. Auditoría & Estrategia SEO",
+        tooltip: "Análisis de palabras clave y estructura óptima para indexación.",
+      },
+      {
+        step: "2. Desarrollo Custom",
+        tooltip: "Creación de theme a medida sin constructores pesados.",
+      },
+      {
+        step: "3. Optimización WPO",
+        tooltip: "Minificación, caché avanzada y optimización de imágenes.",
+      },
+      {
+        step: "4. Integración y Analítica",
+        tooltip: "Conexión con pasarelas de pago y Google Analytics 4.",
+      },
+    ],
+  },
+  {
+    title: "Plataforma Web con CI/CD",
+    description:
+      "Aplicación full-stack escalable, desplegada mediante pipelines automatizados de DevOps para cero tiempo de inactividad.",
+    tags: ["Next.js", "Docker", "DevOps", "Node.js"],
+    demo: "#",
     color: "blue",
-    icon: <Workflow className="w-16 h-16 text-blue-400" />,
+    icon: <Server className="w-16 h-16 text-blue-400" />,
     gradient: "dark:from-blue-500/20 from-blue-500/10 dark:via-blue-600/5 via-blue-400/5 to-transparent",
     glowColor: "rgba(96, 165, 250, 0.15)",
     tagBg: "dark:bg-blue-500/10 bg-blue-500/5 dark:text-blue-300 text-blue-600 dark:border-blue-500/20 border-blue-300/20",
     btnBg: "from-blue-500/20 to-blue-400/20 hover:from-blue-500/30 hover:to-cyan-500/30 border-blue-500/20 hover:border-blue-400/30",
     workflow: [
       {
-        step: "1. Captura de Datos",
-        tooltip:
-          "Captura datos desde un formulario y los normaliza para su procesamiento.",
+        step: "1. Arquitectura Microservicios",
+        tooltip: "Separación de responsabilidades entre frontend y backend.",
       },
       {
-        step: "2. Clasificación Automática",
-        tooltip:
-          "Un algoritmo clasifica al lead como Alto o Bajo valor según reglas definidas.",
+        step: "2. Dockerización",
+        tooltip: "Contenedores ligeros para despliegue consistente en cualquier entorno.",
       },
       {
-        step: "3. Feedback Visual",
-        tooltip:
-          "Muestra el resultado de la clasificación visualmente y en tiempo real.",
+        step: "3. Pipeline CI/CD",
+        tooltip: "Tests automáticos y despliegue continuo con GitHub Actions.",
       },
       {
-        step: "4. Mini Panel CRM",
-        tooltip:
-          "Guarda y organiza los leads procesados en un panel tipo Kanban.",
+        step: "4. Monitoreo",
+        tooltip: "Dashboard de salud de servicios en tiempo real.",
+      },
+    ],
+  },
+  {
+    title: "Rediseño UX/UI B2B",
+    description:
+      "Transformación completa de una plataforma corporativa aplicando investigación UX, aumentando la retención en un 40%.",
+    tags: ["Figma", "UI/UX", "React", "Tailwind"],
+    demo: "#",
+    color: "purple",
+    icon: <Palette className="w-16 h-16 text-purple-400" />,
+    gradient: "dark:from-purple-500/20 from-purple-500/10 dark:via-purple-600/5 via-purple-400/5 to-transparent",
+    glowColor: "rgba(192, 132, 252, 0.15)",
+    tagBg: "dark:bg-purple-500/10 bg-purple-500/5 dark:text-purple-300 text-purple-600 dark:border-purple-500/20 border-purple-300/20",
+    btnBg: "from-purple-500/20 to-purple-400/20 hover:from-purple-500/30 hover:to-pink-500/30 border-purple-500/20 hover:border-purple-400/30",
+    workflow: [
+      {
+        step: "1. Investigación UX",
+        tooltip: "Entrevistas a usuarios y análisis heurístico del sistema anterior.",
+      },
+      {
+        step: "2. Wireframes & Prototipos",
+        tooltip: "Diseño iterativo en Figma con flujos de alta fidelidad.",
+      },
+      {
+        step: "3. Sistema de Diseño",
+        tooltip: "Creación de componentes reutilizables y consistentes.",
+      },
+      {
+        step: "4. Implementación React",
+        tooltip: "Desarrollo pixel-perfect de la nueva interfaz con Tailwind CSS.",
       },
     ],
   },
@@ -72,6 +130,41 @@ const projects = [
         step: "4. Gestión",
         tooltip:
           "CRUD de productos/servicios con diferenciación de lógica de inventario.",
+      },
+    ],
+  },
+  {
+    title: "Automatización Inteligente de Leads",
+    description:
+      "Prototipo funcional de automatización comercial que prioriza clientes potenciales mediante reglas de negocio, simulando flujo de integración con CRM.",
+    tags: ["Next.js", "API Routes", "Tailwind CSS", "React State"],
+    demo: "/demo-leads",
+    color: "blue",
+    icon: <Workflow className="w-16 h-16 text-blue-400" />,
+    gradient: "dark:from-blue-500/20 from-blue-500/10 dark:via-blue-600/5 via-blue-400/5 to-transparent",
+    glowColor: "rgba(96, 165, 250, 0.15)",
+    tagBg: "dark:bg-blue-500/10 bg-blue-500/5 dark:text-blue-300 text-blue-600 dark:border-blue-500/20 border-blue-300/20",
+    btnBg: "from-blue-500/20 to-blue-400/20 hover:from-blue-500/30 hover:to-cyan-500/30 border-blue-500/20 hover:border-blue-400/30",
+    workflow: [
+      {
+        step: "1. Captura de Datos",
+        tooltip:
+          "Captura datos desde un formulario y los normaliza para su procesamiento.",
+      },
+      {
+        step: "2. Clasificación Automática",
+        tooltip:
+          "Un algoritmo clasifica al lead como Alto o Bajo valor según reglas definidas.",
+      },
+      {
+        step: "3. Feedback Visual",
+        tooltip:
+          "Muestra el resultado de la clasificación visualmente y en tiempo real.",
+      },
+      {
+        step: "4. Mini Panel CRM",
+        tooltip:
+          "Guarda y organiza los leads procesados en un panel tipo Kanban.",
       },
     ],
   },
